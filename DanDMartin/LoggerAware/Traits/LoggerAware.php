@@ -6,18 +6,28 @@ use DanDMartin\LoggerAware\Logger\NullLogger;
 
 trait LoggerAware
 {
-	protected $logger;
+    /**
+     * @var PsrLogger
+     */
+    protected $logger;
 
-	public function setLogger(PsrLogger $l)
-	{
-		$this->logger = $l;
-	}
+    /**
+     * @param PsrLogger $l
+     * @required
+     */
+    public function setLogger(PsrLogger $l)
+    {
+        $this->logger = $l;
+    }
 
-	public function getLogger()
-	{
-		if(is_null($this->logger)) {
-			$this->logger = new NullLogger();
-		}
-		return $this->logger;
-	}
+    /**
+     * @return PsrLogger
+     */
+    public function getLogger()
+    {
+        if(is_null($this->logger)) {
+            $this->logger = new NullLogger();
+        }
+        return $this->logger;
+    }
 }
