@@ -15,7 +15,7 @@ trait LoggerAware
      * @param PsrLogger $l
      * @required
      */
-    public function setLogger(PsrLogger $l)
+    public function setLogger(PsrLogger $l): void
     {
         $this->logger = $l;
     }
@@ -23,7 +23,7 @@ trait LoggerAware
     /**
      * @return PsrLogger
      */
-    public function getLogger()
+    public function getLogger(): PsrLogger
     {
         if(is_null($this->logger)) {
             $this->logger = new NullLogger();
