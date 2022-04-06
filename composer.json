@@ -2,7 +2,7 @@
     "name": "dan-d-martin/logger-aware",
     "description": "Simply and transparently add logger support to a class",
     "require": {
-	"php": ">=5.5.0",
+	"php": ">=7.0",
         "psr/log": "~1.0"
     },
     "license": "MIT",
